@@ -1,0 +1,27 @@
+{
+  "devDependencies": {
+    "@prisma/client": "^5.12.0",
+    "@types/node": "^20.12.2",
+    "prisma": "^5.12.0",
+    "typescript": "^5.4.3"
+  },
+  "name": "nlw-unite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "fastify": "^4.26.2",
+    "fastify-type-provider-zod": "^1.1.9",
+    "tsx": "^4.7.1",
+    "undici-types": "^5.26.5",
+    "zod": "^3.22.4"
+  },
+  "scripts": {
+    "start": "node dist/server.mjs",
+    "build": "tsup src --format esm",
+    "dev": "tsx watch --env-file .env src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
