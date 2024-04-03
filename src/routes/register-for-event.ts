@@ -22,7 +22,7 @@ export async function registerForEvent(app: FastifyInstance) {
         },
       },
     },
-    (request, reply) => {
+    async (request, reply) => {
       const { eventId } = request.params;
       const { name, email } = request.body;
 

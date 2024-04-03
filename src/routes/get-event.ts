@@ -50,18 +50,18 @@ export async function getEvent(app: FastifyInstance) {
 
       if (event === null) {
         console.log("Event not found.");
+      } else {
+        return reply.send({
+          event: {
+            id: event.id,
+            title: event.title,
+            slug: event.slug,
+            details: event.details,
+            maximumAttendees: event.maximumAttendees,
+            attendeesAmount: event._count.attendees,
+          },
+        });
       }
-
-      return reply.send({
-        event: {
-          id: event.id,
-          title: event.title,
-          slug: event.slug,
-          details: event.details,
-          maximumAttendees: event.maximumAttendees,
-          attendeesAmount: event._count.attendees,
-        },
-      });
     }
   );
 }
